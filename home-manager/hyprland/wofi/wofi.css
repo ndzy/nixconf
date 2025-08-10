@@ -1,0 +1,99 @@
+@import ".config/wofi/colors.css";
+
+* {
+    font-family: "Ubuntu Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 10px;
+}
+
+window {
+  border: 0.3em solid @primary;
+  background-color: alpha(@background,0.99);
+  animation: slideIn 0.3s ease-in-out both;
+  border-radius: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+     opacity: 0;
+  }
+
+  100% {
+     opacity: 1;
+  }
+}
+
+#inner-box {
+  border: @primary;
+  background-color: none;
+  animation: fadeIn 0.3s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  0% {
+     opacity: 0;
+  }
+
+  0% {
+     opacity: 0;
+  }
+}
+
+#outer-box {
+  margin: 8px;
+  border: @primary;
+  background-color: none;
+}
+
+#scroll {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: none;
+}
+
+#input {
+  margin: 7px 5px 10px 5px;
+  padding: 10px;
+  border-radius: 20px;
+  color: @primary;
+  animation: fadeIn 0.3s ease-in-out both;
+}
+
+#input image {
+    border: @primary ;
+    color: @primary;
+}
+
+#input * {
+  outline: 1px solid @primary !important;
+}
+
+#text {
+  margin: 1px;
+  border: #ffffff ;
+  color: #ffffff ;
+}
+
+#entry {
+  background-color: @background;
+}
+
+#entry arrow {
+  color: @primary ;
+}
+
+#entry:selected {
+  background: @primary ;
+  border-radius: 15px;
+  border: @primary;
+}
+
+#entry:selected #text {
+  color: #ffffff;
+}
+
+#entry:drop(active) {
+  background-color: @primary !important;
+}
