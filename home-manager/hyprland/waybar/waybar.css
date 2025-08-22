@@ -24,7 +24,7 @@ window#waybar.hidden {
 }
 
 #workspaces button {
-    background: @primary;
+    background: @on_secondary_fixed_variant;
     margin: 4px 3px;
     border-radius: 15px;
     padding: 0 1 0px;
@@ -33,7 +33,7 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-    background: @primary;
+    background: @on_primary_container;
     padding: 0 13 0px;
 }
 
@@ -52,7 +52,7 @@ window#waybar.hidden {
 
 
 #cpu {
-    color: @error;
+    color: @on_primary_container;
 }
 
 
@@ -64,37 +64,38 @@ window#waybar.hidden {
 
 
 #temperature {
-			color: @on_secondary_container;
-			border-radius: 0px 20px 20px 0px;
-			margin-right: 15px;
+    color: @on_primary_container;
+		border-radius: 0px 20px 20px 0px;
+		margin-right: 15px;
 }
 
 #memory {
-			color: @tertiary;
+		color: @on_primary_container;
 }
 
 
 #pulseaudio {
-		    	color: @on_primary_container;
-			border-radius: 20px 0px 0px 20px;
+    color: @on_primary_container;
+		border-radius: 20px 0px 0px 20px;
 
 }
 
 
 #tray {
-			margin-left: 10px;
-			background: @surface_container_high;
-			border-radius: 40px;
-			padding: 5 12px;
-			margin: 6px 0px 6px 15px;
+		margin-left: 10px;
+		background: @surface_container_high;
+		border-radius: 40px;
+		padding: 5 12px;
+		margin: 6px 0px 6px 15px;
 
 }
 
 #tray > .passive {
-			-gtk-icon-effect: dim;
+		-gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-			-gtk-icon-effect: highlight;
+		-gtk-icon-effect: highlight;
 }
+
 
