@@ -1,6 +1,6 @@
 { pkgs, ... }:
-
 {
+  
   home.pointerCursor = {
   
     package = pkgs.bibata-cursors;
@@ -19,8 +19,11 @@
     };
 
     gtk4 = {
+      
       extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
+        gtk-application-prefer-dark-theme = 1;
+      };
+    
     };
 
     iconTheme = {
@@ -42,7 +45,6 @@
       name = "Ubuntu Nerd Font Regular";
       size = 11;
     
-    };
-    
+    };    
   };
 }
