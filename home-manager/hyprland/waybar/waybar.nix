@@ -50,6 +50,7 @@
         };
         "pulseaudio" = { 
           scroll-step = 3;
+          tooltip = false;
           format = "{icon}";
           format-bluetooth = "{icon} ";
           format-bluetooth-muted = "󰖁 {icon} ";
