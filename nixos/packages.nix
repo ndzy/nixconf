@@ -70,6 +70,7 @@
 
       mpv
       imv
+      cava
 
   ];
 
