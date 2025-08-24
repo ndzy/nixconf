@@ -13,46 +13,72 @@
         margin = "0 0 0";
         modules-left = ["tray"];
         modules-center = ["hyprland/workspaces"];
-        modules-right = ["clock" "pulseaudio" "cpu" "memory" "temperature"];
+        modules-right = ["clock" "group/expand-3" "cpu" "memory" "temperature"];
         "hyprland/workspaces" = {
-	  all-outputs = true;
-	  disable-scroll = true;
-	  warp-on-scroll = false;
-	  format = "";
+	        all-outputs = true;
+	        disable-scroll = true;
+	        warp-on-scroll = false;
+	        format = "";
         };
         "tray" = {
+          tooltip = false;
+          icon-theme = "Papirus-Nord";
           icon-size = 15;
           spacing = 10;
         };
         "clock" = {
+          tooltip = false;
           format = "󰥔 {:%H:%M}";
         };
         "cpu" = {
-          format = "  {usage}%";
           tooltip = false;
+          format = " ";
+          format-alt = "  {usage}%";
         };
         "memory" = {
-          format = "  {}%";
+          tooltip = false;
+          format = " ";
+          format-alt = "  {used} Gb";
+          interval = 1;
         };
         "temperature" = {
           critical-threshold = 80;
-          format = "{icon}{temperatureC}°C";
+          tooltip = false;
+          format = "{icon}";
+          format-alt = "{icon} {temperatureC}°C";
           format-icons = ["" "" ""];
         };
-        "pulseaudio" = {
+        "pulseaudio" = { 
           scroll-step = 3;
-          format = "{icon} {volume}%";
-          format-bluetooth = "{icon} {volume}% ";
-          format-bluetooth-muted = "󰖁 {icon} {format_source}";
-          format-muted = "󰖁 {format_source}";
-          format-source-muted = " ";
+          format = "{icon}";
+          format-bluetooth = "{icon} ";
+          format-bluetooth-muted = "󰖁 {icon} ";
+          format-muted = "󰖁";
+          format-source-muted = "";
           format-icons = {
-            headphone = " ";
-            default = [" " " " "  "];
+            headphone = "";
+            default = ["" "" " "];
           };
-        on-click = "pwvucontrol";
-	    on-click-right = "overskride";
         };
+
+        "pulseaudio/slider" = {
+          min = 0;
+          max = 100;
+          rotate = 0;
+          device = "pulseaudio";
+          scroll-step = 1;
+        };
+
+        "group/expand-3" = {
+          orientation = "horizontal";
+          drawer = {
+            transition-duration = 600;
+            children-class = "not-power";
+            transition-to-left = true;
+            click-to-reveal = true;
+          };
+        modules = [ "pulseaudio" "pulseaudio/slider" ]; 
+         };
       };
     };
   };
