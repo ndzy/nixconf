@@ -1,7 +1,4 @@
 {
-  #
-  # NETWORK
-  #
 
   networking.hostName = "emptiness";
   networking.networkmanager.enable = true;

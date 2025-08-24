@@ -1,4 +1,5 @@
 {
+  
   wayland.windowManager.hyprland.settings = {
       
       source = "~/.config/hypr/colors.conf";
@@ -103,4 +104,5 @@
           force_default_wallpaper = 0;
       };
   };      
+
 }

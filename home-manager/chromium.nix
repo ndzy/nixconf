@@ -1,6 +1,9 @@
 {
+  
   programs.chromium = {
+    
     enable = true;
+    
     extensions = [
       
       # Ublock Origin
@@ -15,7 +18,8 @@
       # Privacy Badger
       { id = "ponfpcnoihfmfllpaingbgckeeldkhle"; }
 
-
+      # Vimium
+      { id = "dbepggeogbaibhgnhhndojpepiihcmeb"; }
  
     ];
   };

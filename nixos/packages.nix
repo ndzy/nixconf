@@ -1,25 +1,19 @@
 { pkgs, ... }:
 {
-  #
-  # PACKAGES
-  #
 
   nixpkgs.config.allowUnfree = true;
   
-  services.flatpak.enable = true;
+  services.flatpak.enable = true; # Я ПИДОРАС
 
   environment.systemPackages = with pkgs; [
       
-      # Other
-
-      home-manager
-
-      #Drivers
+      # Drivers
 
       mesa
 
       # Utilits
       
+      home-manager
       neovim
       tree
       wget
@@ -27,11 +21,9 @@
       nftables
       fastfetch
       tmux
-      wine
 
       # Sound
 
-      kitty
       pavucontrol
       pwvucontrol
       overskride
@@ -45,7 +37,6 @@
       vesktop
       obsidian
       obs-studio
-      adw-gtk3
 
       # Coding
 
@@ -80,12 +71,10 @@
       mpv
       imv
 
-      # Icons
-
-      papirus-nord
   ];
 
   fonts.packages = with pkgs; [
+      
       nerd-fonts.ubuntu
       nerd-fonts.symbols-only
       noto-fonts-extra
@@ -96,5 +85,7 @@
       font-awesome
       powerline-fonts
       powerline-symbols
+  
   ];
+
 }

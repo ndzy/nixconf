@@ -1,4 +1,5 @@
 {
+  
   wayland.windowManager.hyprland.settings = {
     env = [
         "HYPRCURSOR_THEME, Bibata-Original-Ice"
@@ -12,4 +13,5 @@
         "QT_QPA_PLATFORMTHEME,gtk3"
     ];
   };
+
 }

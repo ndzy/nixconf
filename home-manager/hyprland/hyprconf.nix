@@ -1,4 +1,5 @@
 {
+    
     imports = [
         
         # Hyprland
@@ -19,14 +20,9 @@
 
         ./hypridle.nix
 
-
         # Wallpapers
         
         #./waypaper.nix
-
-       # Material-You themes
-
-       ./matugen.nix 
 
         # Waybar
 
@@ -39,7 +35,10 @@
     ];
     
   wayland.windowManager.hyprland = {
+    
     enable = true;
     systemd.enable = true;
+  
   };
+
 }

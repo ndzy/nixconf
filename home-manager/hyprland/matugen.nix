@@ -1,5 +1,6 @@
 
 {
+  
   programs.matugen = {
     
     enable = true;
@@ -55,4 +56,5 @@
       };
     };
   };
+
 }

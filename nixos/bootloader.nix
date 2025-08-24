@@ -1,11 +1,8 @@
-{ config, lib, pkgs, ... }:
 {
-  #   
-  # BOOTLOADER 
-  #
-
+  
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
 }
 
 

@@ -1,6 +1,6 @@
 {pkgs, user, ...}:
-
 {
+   
    programs.waypaper = {
       
       enable = true;
@@ -33,4 +33,5 @@
 
       };
   };
+
 }

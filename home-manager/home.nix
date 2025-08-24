@@ -11,7 +11,7 @@
 		./fish.nix
 		./chromium.nix
 		./gtk.nix
-        ./hyprland/hyprconf.nix
+    ./hyprland/hyprconf.nix
 	];
 }
 

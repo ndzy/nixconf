@@ -1,4 +1,5 @@
 {
+  
   wayland.windowManager.hyprland.settings = {
     
     "$term" = "alacritty";
@@ -6,7 +7,7 @@
     "$menu" = "wofi";
     "$screen" = "hyprshot -m region -o ~/screenshots/ -s";
     "$browser" = "chromium";
-    "$msgr" = "telegram-desktop";
+    "$msgr" = "Telegram";
     "$cursor" = "hyprctl 'setcursor Bibata-Modern-Ice' 20";
     
     exec-once = [
@@ -20,6 +21,7 @@
     
     ];
   };
+
 }
 
 

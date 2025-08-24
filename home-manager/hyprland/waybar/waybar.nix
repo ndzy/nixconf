@@ -1,7 +1,11 @@
 {
+  
   programs.waybar = {
+    
     enable = true;
+    
     style = ./waybar.css;
+    
     settings = {
       mainBar = {
         height = 10;
@@ -52,5 +56,6 @@
       };
     };
   };
+
 }
 

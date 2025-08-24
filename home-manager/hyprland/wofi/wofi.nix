@@ -1,6 +1,9 @@
 {
+  
   programs.wofi = {
+    
     enable = true;
+    
     settings = {
       show="drun";
       hide_scroll = true;
@@ -19,6 +22,7 @@
       allow_markup = true;
       no_actions = true;
     };
+  
   };
 
   home.file.".config/wofi/style.css".source = ./wofi.css;

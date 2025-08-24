@@ -12,8 +12,10 @@
         isNormalUser = true;
         description = "sicsick";
         extraGroups = [ "networkmanager" "wheel" "input" ];
+    
     };
   };
 
-  services.getty.autologinUser = "sicsick";
+  services.getty.autologinUser = "sicsick"; # Auto-Login
+
 }
