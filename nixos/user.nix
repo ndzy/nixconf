@@ -16,6 +16,6 @@
     };
   };
 
-  services.getty.autologinUser = "sicsick"; # Auto-Login
+  # services.getty.autologinUser = "sicsick"; # Auto-Login
 
 }
