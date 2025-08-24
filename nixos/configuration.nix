@@ -19,8 +19,8 @@
   
   nix.settings.experimental-features = [ 
   
-  "nix-command" 
-  "flakes" 
+    "nix-command" 
+    "flakes" 
   
   ];
 
