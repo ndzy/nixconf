@@ -37,6 +37,7 @@
       vesktop
       obsidian
       obs-studio
+      scrcpy
 
       # Coding
 
