@@ -4,7 +4,7 @@
   font-family: "Ubuntu Nerd Font Propo";
   font-weight: bold;
   font-size: 14px;
-  min-height: 1px;
+  min-height: 10px;
 }
 
 /* Waybar Window */
@@ -121,11 +121,14 @@ window#waybar.hidden {
     border-radius: 20px;
     color: @on_primary_container;
     background: @background;
+    border: @background;
 }
 
 #tray menu separator {
     color: @background;
+    background: @background;
     min-height: 0px;
+    border: @background;
 }
 
 /* Tooltips */
