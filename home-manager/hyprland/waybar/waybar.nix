@@ -27,8 +27,9 @@
           spacing = 10;
         };
         "clock" = {
-          tooltip = false;
+          tooltip = true;
           format = "󰥔 {:%H:%M}";
+          tooltip-format = "󰃮 {:%a, %d %b %Y} ";
         };
         "cpu" = {
           tooltip = false;
@@ -50,6 +51,8 @@
         };
         "pulseaudio" = { 
           scroll-step = 3;
+          on-click-right = "pwvucontrol";
+          on-click-middle = "overskride";
           tooltip = false;
           format = "{icon}";
           format-bluetooth = "{icon} ";
