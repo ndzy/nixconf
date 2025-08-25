@@ -13,6 +13,7 @@
       alias s='sudo';
       alias e='exit';
       alias c='clear';
+      alias scrcpy= 'scrcpy --video-bit-rate=20M --max-fps=60 --max-size 1000 --tcpip';
     '';
   
   };
