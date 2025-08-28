@@ -133,10 +133,10 @@ window#waybar.hidden {
 
 /* Tooltips */
 
-#tooltip {
-  border-radius: 20px;
-  background: @background;
-  color: #ffffff;
-  min-height: 10px;
+tooltip {
+        background: @background;
+        color: @on_primary_container;
+        font-size: 13px;
+        border-radius: 20px;
 }
 

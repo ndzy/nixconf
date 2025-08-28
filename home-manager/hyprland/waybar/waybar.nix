@@ -13,7 +13,7 @@
         margin = "0 0 0";
         modules-left = ["tray"];
         modules-center = ["hyprland/workspaces"];
-        modules-right = ["clock" "group/expand-3" "cpu" "memory" "temperature"];
+        modules-right = ["clock" "group/first" "cpu" "memory" "temperature"];
         "hyprland/workspaces" = {
 	        all-outputs = true;
 	        disable-scroll = true;
@@ -51,8 +51,6 @@
         };
         "pulseaudio" = { 
           scroll-step = 3;
-          on-click-right = "pwvucontrol";
-          on-click-middle = "overskride";
           tooltip = false;
           format = "{icon}";
           format-bluetooth = "{icon} ";
@@ -73,7 +71,7 @@
           scroll-step = 1;
         };
 
-        "group/expand-3" = {
+        "group/first" = {
           orientation = "horizontal";
           drawer = {
             transition-duration = 600;
