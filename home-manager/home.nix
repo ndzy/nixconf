@@ -16,7 +16,7 @@
     
     ./hyprland/hyprconf.nix
     
-    ./term
+    ./term/termconf.nix
   ];
 
 }
