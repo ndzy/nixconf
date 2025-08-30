@@ -43,6 +43,7 @@
 
       vscode
       python314
+      android-tools
       gcc
 
       # WM
@@ -52,7 +53,8 @@
       dunst
       nwg-look
       matugen
-      
+
+      xdg-desktop-portal
       papirus-nord
       adw-gtk3
      
