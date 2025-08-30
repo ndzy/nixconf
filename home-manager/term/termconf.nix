@@ -6,6 +6,6 @@
     ./fish.nix
     ./tmux.nix
   
-  ]
+  ];
 
 }
