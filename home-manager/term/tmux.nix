@@ -70,6 +70,6 @@
           run '~/.tmux/plugins/tpm/tpm'  # Initialisation of Plugin Manager.
         
         ''
-  }
+  };
 
 }
