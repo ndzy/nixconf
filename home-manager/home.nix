@@ -18,7 +18,7 @@
     
     		./term/termconf.nix
 
-		./nvim.nix
+		./nixvim.nix
   ];
 
 }
