@@ -30,6 +30,8 @@
       
       # Soft
 
+      firefox
+      pywalfox-native
       bitwarden
       file-roller
       qbittorrent
@@ -74,6 +76,7 @@
       mpv
       imv
       cava
+      zathura
 
   ];
 
