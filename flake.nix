@@ -25,8 +25,10 @@
     nixosConfigurations.emptiness = nixpkgs.lib.nixosSystem {
       
       system = "x86_64-linux";
-      modules = [ ./nixos/configuration.nix ];
-    
+      modules = [ 
+        ./nixos/configuration.nix
+        inputs.nixvim.nixosModules.nixvim
+      ];
     };
   
     homeConfigurations.sicsick = home-manager.lib.homeManagerConfiguration {
