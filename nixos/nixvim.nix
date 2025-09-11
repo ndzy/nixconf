@@ -1,12 +1,7 @@
-{
-
-  imports = [
+{ pkgs, nixvim, ... }: {
+  environment.systemPackages = [
+    (nixvim.legacyPackages."${pkgs.stdenv.hostPlatform.system}".makeNixvim {
+      colorschemes.gruvbox.enable = true;
+    })
   ];
-
-  programs.nixvim = {
-    enable = true;
-
-    defaultEditor = true;
-    colorschemes.catppuccin.enable = true;
-  };
 }
