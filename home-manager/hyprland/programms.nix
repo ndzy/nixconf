@@ -6,7 +6,7 @@
     "$file" = "thunar";
     "$menu" = "wofi";
     "$screen" = "hyprshot -m region -o ~/screenshots/ -s";
-    "$browser" = "chromium";
+    "$browser" = "firefox";
     "$msgr" = "Telegram";
     "$cursor" = "hyprctl 'setcursor Bibata-Modern-Ice' 20";
     
