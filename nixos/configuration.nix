@@ -11,7 +11,6 @@
 	    ./network.nix
 	    ./user.nix
 	    ./packages.nix
- 	    ./nixvim/nixvim.nix
 	    ./hyprland.nix
 	    ./thunar.nix
 	    ./steam.nix

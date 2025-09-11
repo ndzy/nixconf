@@ -13,7 +13,7 @@
 		
 		./chromium.nix
 		./gtk.nix
-    
+		./nixvim.nix    
     		./hyprland/hyprconf.nix
     
     		./term/termconf.nix
