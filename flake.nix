@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   description = "гойда";
 
@@ -38,7 +40,11 @@
         inputs.nixvim.nixosModules.nixvim
       ];
     };
+    
+    devShells.x86_64-linux.default = pkgs.mkShell {
 
+    };
+    
     homeConfigurations.sicsick = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ ./home-manager/home.nix ];
