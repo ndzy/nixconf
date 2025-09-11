@@ -32,6 +32,7 @@
 
       firefox
       pywalfox-native
+      onlyoffice-desktopeditors
       bitwarden
       file-roller
       qbittorrent
