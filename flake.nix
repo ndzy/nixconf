@@ -24,7 +24,8 @@
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit system; # or alternatively, set `pkgs`
-            module = import ./nixos/nixvim; # import the module directly
+            module = import ./config; # import the module directly
+            # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
               # inherit (inputs) foo;
             };
