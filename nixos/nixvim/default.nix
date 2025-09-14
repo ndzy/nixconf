@@ -1,9 +1,4 @@
-{ pkgs, ... }:
 {
-  programs.nixvim = {
-    enable = true;
-
-    colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
-  };
+  # Import all your configuration modules here
+  imports = [ ./bufferline.nix ];
 }
