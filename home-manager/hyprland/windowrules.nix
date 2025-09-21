@@ -49,8 +49,9 @@
           "opacity 0.8 0.8,class:(org.telegram.desktop)$"
           "opacity 0.8 0.8,class:(vesktop)$"
           "opacity 1 0.85,class:(obsidian)$"
+          "opacity 1 0.85,class:(code)$"
           
-          "opacity 0.8 0.8,class:(waypaper)$"
+	  "opacity 0.8 0.8,class:(waypaper)$"
           "opacity 0.8 0.8,class:(nwg-look)$"
       ];
   };

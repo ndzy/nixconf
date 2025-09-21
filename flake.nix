@@ -1,47 +1,55 @@
 {
-  description = "A nixvim configuration";
+  description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim.url = "github:nix-community/nixvim";
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    # Essentials (nixpkgs-channel and home-manager)
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Flake imports:
+    zen-browser.url = "github:0xc000022070/zen-browser-flake"; 
   };
 
-  outputs =
-    { nixvim, flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
-      perSystem =
-        { system, ... }:
-        let
-          nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./nixos/nixvim; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
-          };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in
-        {
-          checks = {
-            # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-          };
-
-          packages = {
-            # Lets you run `nix run .` to start nixvim
-            default = nvim;
-          };
+  outputs = { self, nixpkgs, zen-browser, home-manager, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      host = "emptiness";
+      username = "sicsick";
+    in {
+      nixosConfigurations."${host}" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          inherit host;
+          inherit system;
         };
+        modules = [
+          ./nixconf/nixos/configuration.nix
+
+          {
+            nixpkgs.overlays = [
+            ];
+          }
+
+          # Home Manager as a NIXOS Module
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              users.sicsick = import ./nixconf/home-manager/home.nix;
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              
+	      # Home-Manager Modules
+              extraSpecialArgs = {
+                inherit inputs; 
+              };
+              sharedModules = [
+              ];
+            };
+          }
+        ];
+      };
     };
 }
