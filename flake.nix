@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "Flake BTW";
 
   inputs = {
     # Essentials (nixpkgs-channel and home-manager)
@@ -10,23 +10,21 @@
     };
 
     # Flake imports:
-    zen-browser.url = "github:0xc000022070/zen-browser-flake"; 
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, zen-browser, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      host = "emptiness";
       username = "sicsick";
     in {
-      nixosConfigurations."${host}" = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.emptiness = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
-          inherit host;
           inherit system;
         };
         modules = [
-          ./nixconf/nixos/configuration.nix
+          ./nixos/configuration.nix
 
           {
             nixpkgs.overlays = [
@@ -37,8 +35,8 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              users.sicsick = import ./nixconf/home-manager/home.nix;
-              useGlobalPkgs = true;
+              users.sicsick = import ./home-manager/home.nix;
+              #useGlobalPkgs = true;
               useUserPackages = true;
               
 	      # Home-Manager Modules
